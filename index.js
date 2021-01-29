@@ -20,9 +20,11 @@ Do the following:
 let votingAge = 18;
 if (votingAge >= 18) {
   console.log(true);
+  return true;
 }
 else {
   console.log(false);
+  return false;
 }
 
 
@@ -43,6 +45,7 @@ let y = 20;
 y >= 15 ? x -= 7 : x += 10;  
 
 console.log(x);
+return x;
 
 
 
@@ -60,7 +63,7 @@ Do the following:
 let year = "1999";
 year = Number(year);
 console.log(year);
-
+return year;
 
 /*
 Task 1d - Multiply
@@ -76,7 +79,7 @@ function multiply(a,b){
   return (a * b);
 }
 console.log(multiply(2, 4));
-
+return multiply(2, 4);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -93,7 +96,7 @@ function dogYears(age){
   return (age * 7);
 }
 console.log(dogYears(32));
-
+return dogYears(32);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
