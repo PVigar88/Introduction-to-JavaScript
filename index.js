@@ -233,9 +233,15 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(kilometers){
+/*add your code here*/
+  const kmToMiles = 1.60934;
+  let miles = kilometers / kmToMiles;
+  return miles;
+}
+console.log(miles(1.60934));
+console.log(miles(16.0934));
+console.log(miles(24.1402));
 
 
 
@@ -247,11 +253,15 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+/*add your code here*/
+  const cmToFeet = 0.0328084;
+  let feet = centimeters * cmToFeet; 
+  return feet;
   }
- 
-
+console.log(feet(30.48));
+console.log(feet(304.8));
+console.log(feet(457.2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -263,10 +273,16 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(start){
+/*add your code here*/
+  let verse;
+  for (let i = start; i > 0; i--){
+    verse = i + ' bottles of soda on the wall, ' + i + ' bottles of soda, take one down pass it around ' + (i - 1) + ' bottles of soda on the wall';
+    // console.log(verse);
+    return verse;
   }
-
+}
+console.log(annoyingSong(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
