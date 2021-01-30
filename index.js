@@ -180,12 +180,47 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computerChoice = Math.random()*3;
+// console.log(computerChoice);
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer) {
+  /*add your code here*/
+  // set player and cpu choices
+  let cpuPick;
+  let playerPick = user.toLowerCase();
+  const victoryMessage = "you win!";
+  const lossMessage = "you lose!";
+  const drawMessage = "it's a draw";
+  // assign cpu choice a string the corresponds to a number range
+  if (computer >= 0 && computer < 1) {
+    cpuPick = "rock";
+  }
+  else if (computer >= 1 && computer < 2) {
+    cpuPick = "paper";
+  }
+  else {
+    cpuPick = "scissors"
+  }
+  // compare choices
+  let result;
+  if ((playerPick === "rock" && cpuPick === "rock") || (playerPick === "paper" && cpuPick === "paper") || (playerPick === "scissors" && cpuPick === "scissors")) {
+    result = drawMessage;
+  }
+  else if ((playerPick === "rock" && cpuPick === "paper") || (playerPick === "paper" && cpuPick === "scissors") || (playerPick === "scissors" && cpuPick === "rock")) {
+    result = lossMessage;
+  }
+  else if ((playerPick === "rock" && cpuPick === "scissors") || (playerPick === "scissors" && cpuPick === "paper") || (playerPick === "paper" && cpuPick === "rock")) {
+    result = victoryMessage;
+  }
+  else {
+    result = "~invalid input~";
+  }
+  return result;
 }
-  
-  
+console.log(game("rock", computerChoice));
+console.log(game("paper", computerChoice));
+console.log(game("scissors", computerChoice));
+console.log(game("spock", computerChoice));  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
