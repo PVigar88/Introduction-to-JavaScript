@@ -186,21 +186,21 @@ let computerChoice = Math.random()*3;
 function game(user, computer) {
   /*add your code here*/
   // set player and cpu choices
-  let cpuPick;
+  let cpuPick = computer;
   let playerPick = user.toLowerCase();
   const victoryMessage = "you win!";
   const lossMessage = "you lose!";
-  const drawMessage = "it's a draw";
+  const drawMessage = "it's a tie";
   // assign cpu choice a string the corresponds to a number range
-  if (computer >= 0 && computer < 1) {
-    cpuPick = "rock";
-  }
-  else if (computer >= 1 && computer < 2) {
-    cpuPick = "paper";
-  }
-  else {
-    cpuPick = "scissors"
-  }
+  // if (computer >= 0 && computer < 1) {
+  //   cpuPick = "rock";
+  // }
+  // else if (computer >= 1 && computer < 2) {
+  //   cpuPick = "paper";
+  // }
+  // else {
+  //   cpuPick = "scissors"
+  // }
   // compare choices
   let result;
   if ((playerPick === "rock" && cpuPick === "rock") || (playerPick === "paper" && cpuPick === "paper") || (playerPick === "scissors" && cpuPick === "scissors")) {
@@ -235,8 +235,8 @@ Using the miles function below do the following:
 
 function miles(kilometers){
 /*add your code here*/
-  const kmToMiles = 1.60934;
-  let miles = kilometers / kmToMiles;
+  const kmToMiles = 0.621371;
+  let miles = kilometers * kmToMiles;
   return miles;
 }
 console.log(miles(1.60934));
@@ -255,8 +255,8 @@ Using the feet function below do the following:
 
 function feet(centimeters){
 /*add your code here*/
-  const cmToFeet = 0.0328084;
-  let feet = centimeters * cmToFeet; 
+  const cmToFeet = 30.48;
+  let feet = centimeters / cmToFeet; 
   return feet;
   }
 console.log(feet(30.48));
@@ -299,8 +299,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(percentage){
+/*Your Code here */
+  if (percentage < 60) {
+    return 'you got an F';
+  }
+  else if (percentage >= 60 && percentage < 70) {
+    return 'you got a D';
+  }
+  else if (percentage >= 70 && percentage < 80) {
+    return 'you got a C';
+  }
+  else if (percentage >= 80 && percentage < 90) {
+    return 'you got a B';
+  }
+  else {
+    return 'you got an A';
+  }
   }
   
   
@@ -318,10 +333,21 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+function vowelCounter(testPhrase) {
+/*add your code here*/
+  let vowelCount = 0;
+  testPhrase = testPhrase.toLowerCase;
 
+  for (let i = 0; i <= testPhrase.length - 1; i++){
+    if (testPhrase.charAt(i).includes('a') || testPhrase.charAt(i).includes('e') || testPhrase.charAt(i).includes('i') || testPhrase.charAt(i).includes('o') || testPhrase.charAt(i).includes('u')) {
+      vowelCount ++;
+    }
+  }
+  return vowelCount;
+}
+console.log(vowelCounter('test'));
+console.log(vowelCounter('apple'));
+console.log(vowelCounter('eerie'));
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
